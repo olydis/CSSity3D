@@ -1,0 +1,73 @@
+@keyframes rotationZ {
+    from {transform: rotateZ(0);}
+    to {transform: rotateZ(360deg);}
+}
+
+body
+{
+    background: #eef;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#container
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+div
+{
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+.building
+{
+    position: absolute;
+    width: 100px; /*w*/
+    height: 100px; /*h*/
+    box-shadow: -10px 10px 50px 10px rgba(0,0,0,0.2);
+    transform: scaleZ(3);
+}
+.wall
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    
+    font-size: 50px;
+    box-shadow: 0px -100px 100px -100px rgba(0,0,0,0.2) inset;
+}
+.wallN
+{
+    background: #eee;
+    transform: translateY(-50%) rotateX(-90deg) translateY(-50%) rotateY(180deg);
+}
+.wallS
+{
+    background: #bbb;
+    transform: rotateZ(180deg) translateY(-50%) rotateX(-90deg) translateY(-50%) rotateY(180deg);
+}
+.wallE
+{
+    background: #ddd;
+    transform: rotateZ(90deg) translateY(-50%) rotateX(-90deg) translateY(-50%) rotateY(180deg);
+}
+.wallW
+{
+    background: #aaa;
+    transform: rotateZ(270deg) translateY(-50%) rotateX(-90deg) translateY(-50%) rotateY(180deg);
+}
+.roof
+{
+    background: #fff;
+    transform: translateZ(100px);
+    z-index: 1;
+    box-shadow: none;
+}
