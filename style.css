@@ -31,7 +31,7 @@ div
     width: 100px; /*w*/
     height: 100px; /*h*/
     box-shadow: -10px 10px 50px 10px rgba(0,0,0,0.2);
-    transform: scaleZ(3);
+    transform: scaleZ(1);
 }
 .wall
 {
@@ -43,6 +43,7 @@ div
     
     font-size: 50px;
     box-shadow: 0px -100px 100px -100px rgba(0,0,0,0.2) inset;
+    border: 1px solid #eee;
 }
 .wallN
 {
@@ -68,6 +69,5 @@ div
 {
     background: #fff;
     transform: translateZ(100px);
-    z-index: 1;
     box-shadow: none;
 }

@@ -1,0 +1,5 @@
+-target ES5
+--noImplicitAny
+--removeComments
+--module amd
+main.ts
