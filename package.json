@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "install": "tsc @tscClient.txt"
+    "install": "tsc @tscClient.txt",
+    "installx": "nodemon --ext ts --exec npm install"
   }
 }

@@ -33,7 +33,10 @@ function createChildFace(width?: number, height?: number, container?: JQuery): J
 
 function pullOut(amount: number, base: JQuery): { roof: JQuery, walls: [JQuery, JQuery, JQuery, JQuery] }
 {
+	var baseHTML = base.html();
+	base.css("position", "relative");
 	var roof = createChildFace(undefined, undefined, base);
+	roof.html(baseHTML);
 	var wallN = createChildFace(undefined, amount, base);
 	var wallS = createChildFace(undefined, amount, base);
 	var wallE = createChildFace(undefined, amount, base);
@@ -55,12 +58,14 @@ function createCube(size: number): { base: JQuery, roof: JQuery, walls: [JQuery,
 
 
 $(() => {
-	var plane = $("#plane");
-	var cube = createCube(100);
-	cube.base.offset({ left: 50, top: 50 }).appendTo(plane);
-	cube.roof.css("background","#eee");
-	cube.walls[0].css("background","#ddd");
-	cube.walls[1].css("background","#ccc");
-	cube.walls[2].css("background","#bbb");
-	cube.walls[3].css("background","#aaa");
+	// var plane = $("#plane");
+	// var cube = createCube(100);
+	// cube.base.offset({ left: 50, top: 50 }).appendTo(plane);
+	// cube.roof.css("background","#eee");
+	// cube.walls[0].css("background","#ddd");
+	// cube.walls[1].css("background","#ccc");
+	// cube.walls[2].css("background","#bbb");
+	// cube.walls[3].css("background","#aaa");
+	
+	pullOut(100, $("#pot"));
 });
