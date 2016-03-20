@@ -1,6 +1,11 @@
 @keyframes rotationZ {
-    from {transform: rotateZ(0);}
+    from {transform: rotateZ(0deg);}
     to {transform: rotateZ(360deg);}
+}
+
+*
+{
+    box-sizing: border-box;
 }
 
 body
@@ -70,4 +75,24 @@ div
     background: #fff;
     transform: translateZ(100px);
     box-shadow: none;
+}
+
+#pot div.faceOuter
+{
+    /*border-radius: 50px;*/
+}
+#pot div.faceOuterFront
+{
+    background: #6495ED;
+    /*box-shadow: 0px 0px 10px 10px #84b5ff inset;*/
+}
+#pot div.faceOuterBack
+{
+    background: #84b5ff;
+    transform: rotateY(180deg);
+}
+#pot div.faceBlock
+{
+    background: #84b5ff;
+    transform: translateZ(-30px) scale(0.95);
 }
